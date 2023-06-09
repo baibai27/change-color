@@ -1,38 +1,48 @@
-.App {
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+
+body {
+  transition: background-color 0.2s ease;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#current-color {
+  font-size: clamp(1rem, 9vw, 4rem);
+  margin-top: 150px !important;
+  font-family: monospace;
+  text-shadow: 2px 2px 0 #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+div.colors {
+  position: absolute;
+  margin-top: 50px;
+  bottom: 90px;
+  width: 100%;
+}
+
+div.colors button {
+  margin: 0 10px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 7px solid #fff;
+}
+
+button.active {
+  border-color: green !important;
+}
+
+@media (max-width: 768px) {
+  #current-color {
+    margin-top: 10px !important;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  div.colors {
+    bottom: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  div.colors button {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
